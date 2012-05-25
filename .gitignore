@@ -1,0 +1,4 @@
+#optimized and compiled python files
+*.py[co]
+# tilde files
+*~

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tileset-shinygold" tilewidth="32" tileheight="32">
+  <image source="../../../../home/xorrr/python/pygame-tutorial/tileset-shinygold.png" width="128" height="4300"/>
+ </tileset>
+ <tileset firstgid="537" source="../../../../home/xorrr/gamedev/guernica/BACKUPTRIGGERS.tsx"/>
+ <tileset firstgid="569" source="npc_triggers.tsx"/>
+ <layer name="ground" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjZWBgYB3Fo3gUj+JRPIpJxACBSAfR
+  </data>
+ </layer>
+ <layer name="walls" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxzYWBgcKEyphYYNY925pETh4TkcPGpYR4xcgPpvsFoHrI8pfFLDhg1b3CaR00MAMeoG+U=
+  </data>
+ </layer>
+ <layer name="triggers" width="20" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBg0GGiDgYBbShNDaDFRD/zTMiwh57uo7Z5ikBxFSSsicSWxKEHn3lSaOIyTLjlyDGPGDlSzJOmsvukBpl5StC41GVC5YOwMhnmkQNGzaOuecZYzDZDE8NVjoHUaUHlNJmog0EAAMUvEVY=
+  </data>
+ </layer>
+ <layer name="cat" width="20" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2B4AUumgXbBKBgFIwMAANAiADw=
+  </data>
+ </layer>
+</map>
