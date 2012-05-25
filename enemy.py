@@ -5,7 +5,7 @@ ENEMYSPEED = 100
 
 class Enemy(pygame.sprite.Sprite):
     # the
-    image = pygame.image.load('enemy.png')
+    image = pygame.image.load('gameimages/enemy.png')
     # self ist das object welche die methoden nutzt #group = spritesgruppe
     def __init__(self, location, *groups):
         super(Enemy, self).__init__(*groups)
