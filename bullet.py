@@ -5,7 +5,7 @@ LEFT = 'left'
 RIGHT = 'right'
 
 class Bullet(pygame.sprite.Sprite):
-    image = pygame.image.load('bullet.png')
+    image = pygame.image.load('gameimages/bullet.png')
     def __init__(self, location, direction, *groups):
         super(Bullet, self).__init__(*groups)
         self.rect = pygame.rect.Rect(location, self.image.get_size())
