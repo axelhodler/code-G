@@ -2,6 +2,12 @@
 # 
 # the two shotgun files:
 # License: Attribution 3.0 | Recorded by RA The Sun God
+#
+# the current basic structure was taken from 
+# Introduction to Game Development by Richard Jones
+# http://www.youtube.com/watch?v=duc3jYgAaR0
+#
+# some chrono trigger sprites were take from http://videogamesprites.net/
 
 import pygame
 import tmx
