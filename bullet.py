@@ -3,6 +3,13 @@ import pygame
 BULLETSPEED = 500
 LEFT = 'left'
 RIGHT = 'right'
+UP = 'up'
+DOWN = 'down'
+###
+UP_LEFT = 'up_left'
+UP_RIGHT = 'up_right'
+DOWN_LEFT = 'down_left'
+DOWN_RIGHT = 'down_right'
 
 class Bullet(pygame.sprite.Sprite):
     image = pygame.image.load('gameimages/bullet.png')
@@ -18,10 +25,14 @@ class Bullet(pygame.sprite.Sprite):
             self.kill()
             return
         if self.direction == LEFT:
-          self.rect.x += -1 * BULLETSPEED * dt
+            self.rect.x += -1 * BULLETSPEED * dt
         elif self.direction == RIGHT:
-          self.rect.x += 1 * BULLETSPEED * dt
+            self.rect.x += 1 * BULLETSPEED * dt
+        elif self.direction == UP:
+            self.rect.y += -1 * BULLETSPEED * dt
+        elif self.direction == DOWN:
+            self.rect.y += 1 * BULLETSPEED * dt
         # check collision
         if pygame.sprite.spritecollide(self, game.enemies, True):
-            game.explosion.play()
+
             self.kill()

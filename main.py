@@ -9,6 +9,10 @@
 #
 # some chrono trigger sprites were take from http://videogamesprites.net/
 
+
+# tiled shit has to be in the same folder as the fucking tmx.py 8[[[
+# TODO change that shit
+
 import pygame
 import tmx
 
@@ -20,16 +24,16 @@ class Game(object):
     def main(self, screen):
         clock = pygame.time.Clock()
 
-#        background = pygame.image.load('background.png')
-        # TILEMAP part
-        self.tilemap = tmx.load('guernica_test.tmx', screen.get_size())
+        # tiled part
+        self.tilemap = tmx.load('tiled/map.tmx', screen.get_size())
 
         self.sprites = tmx.SpriteLayer()
         # get the start cell in the map and set the player position accordingly
         start_cell = self.tilemap.layers['triggers'].find('player')[0]
         self.player = Player((start_cell.px, start_cell.py), self.sprites)
         self.tilemap.layers.append(self.sprites)
-
+        
+        # enemies
         self.enemies = tmx.SpriteLayer()
         for enemy in self.tilemap.layers['triggers'].find('enemy'):
             Enemy((enemy.px, enemy.py), self.enemies)
@@ -41,10 +45,11 @@ class Game(object):
           Cat((cats.px, cats.py), self.cat)
         self.tilemap.layers.append(self.cat)
         
-
+        # weapon sound
         self.shoot = pygame.mixer.Sound('sounds/weapons/shotgun_shot.wav')
-        self.explosion = pygame.mixer.Sound('sounds/weapons/shotgun_reload.wav')
-
+        self.reload = pygame.mixer.Sound('sounds/weapons/shotgun_reload.wav')
+        
+        # gameloop
         while 1:
             dt = clock.tick(30)
 
@@ -55,7 +60,6 @@ class Game(object):
                     return
 
             self.tilemap.update(dt / 1000., self)
- #           screen.blit(background, (0, 0))
             self.tilemap.draw(screen)
             pygame.display.flip()
             
@@ -67,5 +71,6 @@ class Game(object):
 if __name__ == '__main__':
     pygame.init()
     screen = pygame.display.set_mode((640, 480))
+    pygame.display.set_caption("insert gamename")
     Game().main(screen)
 

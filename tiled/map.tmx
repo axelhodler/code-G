@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="50" height="50" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="basictiles" tilewidth="32" tileheight="32">
+  <image source="basictiles.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="3" source="triggers.tsx"/>
+ <tileset firstgid="35" source="npc_triggers.tsx"/>
+ <layer name="ground" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMBKHj+4dejoGCq6aqqqqqqqqqqqrPH9yzE4k=
+  </data>
+ </layer>
+ <layer name="foliage" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztz0ENACAQwDDwb5oHFkhYLq2CbS0AAIBr/w54xEeLjxYfLT5afLT4aJnyAQAAAMx3AFknAA8=
+  </data>
+ </layer>
+ <layer name="triggers" width="50" height="50" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztz8EJgEAMRNEtwquy/VdpA8JCEDMu711DYP4YwBdm9wAezcX9Kvz8zeweAECUo3vASxI7zsJPYkeFjiw6sujIoiOLjiy7dAAAAAD7uwED7AHU
+  </data>
+ </layer>
+ <layer name="cat" width="50" height="50" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7B5wb9HTCzhoFXQBAAAAIC2uQ4AAAAAADy0G5EAJA==
+  </data>
+ </layer>
+</map>
